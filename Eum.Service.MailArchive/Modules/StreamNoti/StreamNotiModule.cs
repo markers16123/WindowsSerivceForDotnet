@@ -1,9 +1,4 @@
 ﻿using Autofac;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eum.Service.MailArchive.Modules.StreamNoti
 {
@@ -11,6 +6,18 @@ namespace Eum.Service.MailArchive.Modules.StreamNoti
     {
         protected override void Load(ContainerBuilder builder)
         {
+            //
+            // Core
+
+            builder.RegisterType<StreamNotiConfig>()
+                .SingleInstance()
+                .AsSelf();
+
+            builder.RegisterType<MailArchiveAgent>()
+                .As<IMailArchiveAgent>()
+                .SingleInstance()
+                .AsSelf();
+
             base.Load(builder);
         }
     }

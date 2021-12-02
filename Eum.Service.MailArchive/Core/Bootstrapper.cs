@@ -13,7 +13,7 @@ namespace Eum.Service.MailArchive.Core
 
         public Bootstrapper()
         {
-            _log = this.Logger("WindowsService");
+            _log = this.Logger("Bootstrapper");
         }
 
         internal static void Bootstrap()

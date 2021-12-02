@@ -109,8 +109,9 @@
     <Compile Include="Core\Bootstrapper.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Core\ContainerResolver.cs" />
+    <Compile Include="Modules\StreamNoti\StreamNotiConfig.cs" />
     <Compile Include="Modules\StreamNoti\StreamNotiModule.cs" />
-    <Compile Include="Modules\StreamNoti\Services\MailArchiveService.cs" />
+    <Compile Include="Modules\StreamNoti\MailArchiveAgent.cs" />
     <Compile Include="Core\UnhandledExceptionHandler.cs" />
     <Compile Include="WindowsService.cs">
       <SubType>Component</SubType>
@@ -149,6 +150,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Modules\StreamNoti\Model\" />
+    <Folder Include="Modules\StreamNoti\Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,14 +1,8 @@
 ﻿using Eum.Service.MailArchive.Core;
+using Eum.Service.MailArchive.Modules.StreamNoti;
 using log4net;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eum.Service.MailArchive
 {
@@ -39,13 +33,13 @@ namespace Eum.Service.MailArchive
          
         protected override void OnStart(string[] args)
         {
-            _log.Info("-------------------------------------------------------------------------------");
+            _log.Info("======================================================================");
             _log.Info("OnStart ( args )");
 
             try
             {
                 Bootstrapper.Bootstrap();
-
+                this.GetInstance<IMailArchiveAgent>().Start();
             }
             catch (Exception ex)
             {
@@ -59,18 +53,11 @@ namespace Eum.Service.MailArchive
             _log.Info("OnStop ( )");
             try
             {
-                //var scheduler = this.GetInstance<FullSyncScheduler>();
-                //scheduler.Stop();
-
-                //var context = this.GetInstance<SubscriptionManager>();
-                //context.UnSubscribe();
-
-                //var manager = this.GetInstance<ApprovalManager>();
-                //manager.Close();
+                this.GetInstance<IMailArchiveAgent>().Stop();
             }
             catch (Exception ex)
             {
-                _log.Equals(ex);
+                _log.Error(ex);
             }
         }
     }
