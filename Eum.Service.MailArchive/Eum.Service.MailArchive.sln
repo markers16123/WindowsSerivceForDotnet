@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Service.MailArchive", "Eum.Service.MailArchive.csproj", "{D84C6681-8E20-4035-8A88-13FC0870AD1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D84C6681-8E20-4035-8A88-13FC0870AD1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84C6681-8E20-4035-8A88-13FC0870AD1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84C6681-8E20-4035-8A88-13FC0870AD1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84C6681-8E20-4035-8A88-13FC0870AD1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63E374C0-C29F-4A73-904B-5A4526916844}
+	EndGlobalSection
+EndGlobal
